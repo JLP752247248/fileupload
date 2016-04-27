@@ -1,0 +1,33 @@
+├── base.js   实现一些常用的帮助类方法，如inherits, log等等。
+├── file.js    文件类，Queue中存放的数据类。
+├── jq-bridge.js    jQuery的替代品，只实现webuploader所需的，当然，如果已经有jQuery了，此文件不用打包。
+├── lib
+│   ├── blob.js  带ruid（为了兼容flash抽象出来的，ruid为运行时id）的Blob类
+│   ├── dnd.js    文件拖拽
+│   ├── file.js   带ruid的文件类，blob的子类。
+│   ├── filepaste.js  负责图片粘贴。
+│   ├── filepicker.js    文件选择器
+│   ├── image.js    图片处理类，生成缩略图和图片压缩。
+│   └── transport.js    文件传送。
+├── mediator.js   Event类
+├── promise.js    同jq-bridge, 在没有jQuery的时候才需要。用来实现Deferred。
+├── queue.js    队列
+├── runtime
+│   ├── client.js   连接器
+│   ├── compbase.js    component的基类。
+│   ├── flash
+│   │   ├── xxx lib中flash的具体实现。
+│   ├── html5
+│   │   ├── xxx lib中html5的具体实现。
+│   └── runtime.js
+├── uploader.js    Uploader类。
+└── widgets
+    ├── filednd.js   文件拖拽应用在Uploader
+    ├── filepaste.js   图片粘贴应用在Uploader
+    ├── filepicker.js   文件上传应用在Uploader中。
+    ├── image.js     图片文件在对应的时机做图片压缩和预览
+    ├── queue.js     队列管理
+    ├── runtime.js    添加runtime信息给Uploader
+    ├── upload.js      负责具体上传逻辑
+    ├── validator.js    各种验证器
+    └── widget.js    实现command机制
